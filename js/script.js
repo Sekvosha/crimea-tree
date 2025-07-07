@@ -6,6 +6,7 @@ const config = {
 };
 
 const file_container = document.getElementById('file_div');
+const pub_count = document.getElementById('pub_count');
 
 async function getFileTree(){
     try {
@@ -48,6 +49,7 @@ async function GetFileContent(file_path){
 
 async function DisplayFiles(){
     const files = await getFileTree();
+    pub_count.textContent = String(files.length)
 
     const {sorting} = new Intl.Collator(undefined, {
         numeric: true
