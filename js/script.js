@@ -62,9 +62,9 @@ async function DisplayFiles(){
         const file_block = document.createElement(`div`);
         file_block.className = 'file_div';
 
-        header = file_path.replace(config.folder+'/', '')
-        header = header.replace('.md', '')
-        header = header.charAt(0).toUpperCase() + header.slice(1)
+        header = file_path.replace(config.folder+'/', '');
+        header = header.replace('.md', '');
+        header = header.charAt(0).toUpperCase() + header.slice(1);
         header = '🌲 ' + header;
 
         file_block.innerHTML = `
@@ -81,10 +81,11 @@ async function DisplayFiles(){
         `;
         file_container.appendChild(file_block);
 
-        const content = await GetFileContent(file_path);
+        const content_md = await GetFileContent(file_path);
+        const content_html = marked.parse(content_md);
 
         const content_element = document.createElement('pre');
-        content_element.textContent = content;
+        content_element.innerHTML = content_html;
         content_element.classList.add('t-text');
         content_element.classList.add('t-text-md');
         content_element.classList.add('padd');
