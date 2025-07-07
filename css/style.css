@@ -1,18 +1,26 @@
-        .file-block {
-            border: 1px solid #ddd;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-        }
-        pre {
-            white-space: pre-wrap;
-            background-color: #f0f0f0;
-            padding: 10px;
-            border-radius: 3px;
-            overflow-x: auto;
-        }
-        .loading {
-            color: #666;
-            font-style: italic;
-        }
+.file-block {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+pre {
+    border-color: darkgreen; 
+    border-style: double;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    white-space: pre-wrap;
+    background-color: #e2e2e2;
+    padding: 14px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+.padd {
+    padding: 10px;
+}
+
+.loading {
+    color: #666;
+    font-style: italic;
+}

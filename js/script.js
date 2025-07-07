@@ -48,7 +48,14 @@ async function GetFileContent(file_path){
 
 async function DisplayFiles(){
     const files = await getFileTree();
+
+    const {sorting} = new Intl.Collator(undefined, {
+        numeric: true
+    });
+    files.sort(sorting).reverse();
+
     console.log('Получен список файлов: ', files)
+
     for(const file_path of files){
         const file_block = document.createElement(`div`);
         file_block.className = 'file_div';
